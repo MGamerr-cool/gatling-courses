@@ -12,5 +12,6 @@ class CommonScenario {
 
   val mainScenario = scenario("mainScenario")
     .exec(contacts)
+    .exec(news)
 
 }

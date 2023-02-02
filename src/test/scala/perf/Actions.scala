@@ -9,4 +9,8 @@ object Actions {
     .get("/contacts.php")
     .check(status is 200)
 
+  val news = http("/news.php")
+    .get("/news.php")
+    .check(status is 200)
+
 }
