@@ -10,8 +10,19 @@ object CommonScenario{
 
 class CommonScenario {
 
+  val open = group("open"){
+    exec(webtours)
+      .exec(welcomePl)
+      .exec(navPl)
+  }
+
+  val login = group("login"){
+    exec(loginPl)
+  }
+
   val mainScenario = scenario("mainScenario")
-    .exec(contacts)
-    .exec(news)
+    .feed(Feeders.users)
+    .exec(open)
+    .exec(login)
 
 }
