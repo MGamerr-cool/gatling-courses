@@ -24,9 +24,9 @@ object Actions {
   //--------------------login------------------
   val loginPl = http("/cgi-bin/login.pl")
     .post("/cgi-bin/login.pl")
-    .formParam("userSession","${userSession}")
-    .formParam("username","${login}")
-    .formParam("password","${password}")
+    .formParam("userSession","#{userSession}")
+    .formParam("username","#{login}")
+    .formParam("password","#{password}")
     .formParam("login.x","77")
     .formParam("login.y","14")
     .formParam("JSFormSubmit","off")

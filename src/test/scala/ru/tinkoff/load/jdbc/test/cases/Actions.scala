@@ -28,7 +28,7 @@ object Actions {
   def insertTest(): DBInsertActionBuilder =
     jdbc("INSERT TEST")
       .insertInto("TEST_TABLE", Columns("ID", "NAME"))
-      .values("ID" -> "${i}", "NAME" -> "Test3")
+      .values("ID" -> "#{i}", "NAME" -> "Test3")
 
   def callTest(): DBCallActionBuilder =
     jdbc("CALL PROCEDURE TEST")
@@ -39,7 +39,7 @@ object Actions {
     insertInto("TEST_TABLE", Columns("ID", "NAME", "FLAG")).values("ID" -> 20, "NAME"                -> "Test 12", "FLAG"          -> true),
     insertInto("TEST_TABLE", Columns("ID", "NAME")).values("ID"         -> 40, "NAME"                -> "Test 34"),
     insertInto("TEST_TABLE", Columns("ID", "NAME", "CREATED_AT"))
-      .values("ID"                                                      -> 30, "NAME"                -> "Test  ${i}", "CREATED_AT" -> LocalDateTime.now().minusMonths(6)),
+      .values("ID"                                                      -> 30, "NAME"                -> "Test  #{i}", "CREATED_AT" -> LocalDateTime.now().minusMonths(6)),
     update("TEST_TABLE").set("NAME" -> "TEST 5").where("ID = 2"),
     insertInto("TT", Columns("ID", "NAME")).values("ID"                 -> UUID.randomUUID(), "NAME" -> "OOO342ff"),
     update("TEST_TABLE").set("NAME" -> "bird").all,
