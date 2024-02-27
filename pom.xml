@@ -15,10 +15,10 @@
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <scala.version>2.12.6</scala.version>
+    <scala.version>2.13.10</scala.version>
     <encoding>UTF-8</encoding>
 
-    <gatling.version>3.0.3</gatling.version>
+    <gatling.version>3.9.0</gatling.version>
 
     <scala-maven-plugin.version>3.3.1</scala-maven-plugin.version>
   </properties>
