@@ -10,6 +10,13 @@ object HomeworkScenarios {
 }
 class HomeworkScenarios {
   val scn: ScenarioBuilder = scenario("Homework")
-    .exec(ActionsHomework.select)
-    .exec(ActionsHomework.selectNameDepartments)
+    .exec(ActionsHomework.selectPatients)
+    .exec(ActionsHomework.selectPatientsAsthma)
+    .exec(ActionsHomework.insertPatientsSophie)
+    .exec(ActionsHomework.insertPatientsJackEmma)
+    .exec(ActionsHomework.batchPatientsAge)
+    .exec(ActionsHomework.batchPatientsDiagnosis)
+    //.exec(ActionsHomework.deleteNewPatient)
+    //.exec(ActionsHomework.deleteNewPatients)
+
 }
