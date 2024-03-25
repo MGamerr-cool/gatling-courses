@@ -17,7 +17,9 @@ class HomeworkTest extends Simulation{
     .connectionTimeout(1.minute)
 
   setUp(
-    HomeworkScenarios().inject(atOnceUsers(1)),
+    HomeworkScenarios().inject(
+      constantConcurrentUsers(1).during(10)
+    ),
   ).protocols(jdbcProtocol)
 
 }
